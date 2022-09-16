@@ -7,6 +7,11 @@
 
 API to control a condominium parking lot. Each condominium has a single place identified by the license plate, apartment and block.
 
+## AUTHORIZATION
+	(HttpMethod.GET, "/parking-spot/**").permitAll()
+	(HttpMethod.POST, "/parking-spot").hasRole("USER")
+	(HttpMethod.DELETE, "/parking-spot/**").hasRole("ADMIN")
+
 ## REQUEST
 
 * BODY POST: 
